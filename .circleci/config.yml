@@ -11,8 +11,8 @@ jobs:
           #chmod -R 755 katalon
           command:
             cd katalon/src/scripts &&
-            katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -projectPath="test/project/test.prj"
+            katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
       - store-test_results:
-          path: ./report
+          path: ../../../report
       - store-artifacts:
-          path: ./report
+          path: ../../../report

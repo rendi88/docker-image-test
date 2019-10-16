@@ -21,7 +21,8 @@ if ! [ -d "$source_dir" ]; then
 fi
 
 # project source code
-project_dir=/tmp/katalon_execute/project
+#project_dir=/tmp/katalon_execute/project
+project_dir=../../../test/project
 mkdir -p $project_dir
 
 cp -r $source_dir/* $project_dir
