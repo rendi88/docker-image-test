@@ -10,8 +10,7 @@ jobs:
           name: Execute Katalon Studio
           #chmod -R 755 katalon
           command:
-            cd katalon/src/scripts &&
-            katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+            katalon/src/scripts/katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
       - store-test_results:
           path: ../../../report
       - store-artifacts:
