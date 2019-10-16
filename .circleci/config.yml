@@ -8,8 +8,8 @@ jobs:
       - run:
           name: Execute Katalon Studio
           command: |
-            chmod -R 755 ./katalon
-            ./katalon/src/script/katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="./test/project/Test Suites/TS_RegressionTest"
+            chmod -R 755 katalon
+            katalon/src/script/katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="test/project/Test Suites/TS_RegressionTest"
       - store-test_results:
           path: ./report
       - store-artifacts:
