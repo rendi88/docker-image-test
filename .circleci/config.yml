@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Execute Katalon Studio
-          command: 
+          command: |
             chmod -R 755 ./katalon
             ./katalon/src/setup/katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="./test/project/Test Suites/TS_RegressionTest"
       - store-test_results:
